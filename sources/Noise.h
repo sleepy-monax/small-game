@@ -1,6 +1,6 @@
 #pragma once
 
-#include <stdint.h>
+#include "Common.h"
 
 #define CUBIC_NOISE_PERIOD_INFINITELY INT32_MAX
 

@@ -1,7 +1,10 @@
 #pragma once
 
-#include <raylib.h>
-#include <raymath.h>
+#include <stdbool.h>
+#include <stdint.h>
+#include <stdlib.h>
+
+#define __create(__type) ((__type *)calloc(1, sizeof(__type)))
 
 #define __unused(__stuff) ((void)(__stuff))
 

@@ -1,6 +1,6 @@
 #include <math.h>
 
-#include "utils/Noise.h"
+#include "Noise.h"
 
 #define CUBIC_NOISE_RAND_A 134775813
 #define CUBIC_NOISE_RAND_B 1103515245
@@ -11,7 +11,7 @@ static float noiseRandom(
     int32_t y)
 {
     return (float)((((x ^ y) * CUBIC_NOISE_RAND_A) ^ (seed + x)) *
-                   (((CUBIC_NOISE_RAND_B * x) << 16) ^ (CUBIC_NOISE_RAND_B * y) - CUBIC_NOISE_RAND_A)) /
+                   ((((CUBIC_NOISE_RAND_B * x) << 16) ^ (CUBIC_NOISE_RAND_B * y)) - CUBIC_NOISE_RAND_A)) /
            UINT32_MAX;
 }
 
